@@ -1,0 +1,6 @@
+/*
+working platform:- SQL
+*/
+select
+(case when grade >7 then name else null end) 
+as Name ,grades.grade, marks from Students join grades on Min_Mark<=marks and marks<=Max_Mark order by grade desc , Name asc , marks asc;
