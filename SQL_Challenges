@@ -1,6 +1,7 @@
 /*
 Working on platform: -MySQL
-*/WITH cte AS 
+*/
+WITH cte AS 
 (
   SELECT s.hacker_id, s.name, COUNT(*) AS total
   FROM Hackers s
