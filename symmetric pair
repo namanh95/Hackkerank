@@ -1,0 +1,16 @@
+/*
+Working on platform: -MySQL
+*/
+
+SELECT x, y
+FROM(
+    SELECT x, y
+    FROM functions
+    WHERE x=y
+    GROUP BY x, y
+    HAVING COUNT(*) =2
+UNION
+    SELECT f1.x, f1.y
+    FROM functions AS f1, functions AS f2
+    WHERE f1.x < f1.y AND f1.x=f2.y AND f1.y=f2.x) AS a
+ORDER BY x, y;
